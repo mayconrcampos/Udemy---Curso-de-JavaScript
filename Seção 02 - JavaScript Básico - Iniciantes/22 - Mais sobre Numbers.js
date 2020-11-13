@@ -56,6 +56,8 @@ numero01 = parseFloat(numero01.toFixed(2))
 console.log(numero01, Number.isInteger(numero01)) // 1 true
 // Agora sim o JavaScript considera que numero01 é um inteiro.
 
+numero01 = Number(numero01.toFixed(2))
+
 numero01 += numero02
 console.log(numero01)
 
