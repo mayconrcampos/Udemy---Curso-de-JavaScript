@@ -35,3 +35,28 @@ console.log(`${umastring} ${outrastring}`) // faz a mesma coisa.
 console.log(umastring.indexOf("caractere")) // Retorna o indice do início da palavra. Neste caso 10.
 // Caso não exista a palavra, ele retorna -1.
 
+console.log(umastring.indexOf("com", 10))
+// Quando utilizamos o segundo argumento, anda mais é que indicando qual indice inicia a pesquisa. Neste caso, a partir do indice 10 começou a procura pela string "com"... Achou-a no indice 21. Se não encontrar nada, retorna -1.
+
+console.log(umastring.lastIndexOf("com"))
+// mesma coisa que indexOf, mas a busca vem de trás para frente.
+console.log(umastring.lastIndexOf("caractere", 9))
+// Também, podemos usar a procura de tráz indicando um índice para começar a procura, só que neste caso de trás pra frente.
+
+// usando RegEX pra encontrar strings com todas as letras minúsculas.
+console.log(umastring.match(/[a-z]/g))
+// O match encontra um array, pois foi indicado com a flag g.
+
+// Abaixo estamos pedindo pra encontrar a letra r
+console.log(umastring.search(/r/))
+// ele retorna o indice desta letra.
+
+// o Replace substitui letras ou palavras.
+console.log(umastring.replace("barra","tromba"))
+// Logo, substituimos a palavra barra por tromba. Ficou estranho, mas deixa assim mesmo.
+
+
+let stringpraestudar = "O rato roeu a roupa do rei de roma"
+
+console.log(stringpraestudar.length)
+// retorna o tamanho da string
