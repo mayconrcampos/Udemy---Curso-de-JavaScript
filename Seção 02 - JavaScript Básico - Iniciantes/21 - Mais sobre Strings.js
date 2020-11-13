@@ -1,6 +1,9 @@
 /**
  * Algumas coisas sobre strings em JavaScript.
+ * 
+ * Eu sei que é chato botar tanta coisa dentro de um arquivo só, mas vai assim mesmo.
  */
+
 // Podemos usar aspas simples dentro de uma string que foi aberta com aspas duplas, ou vice versa.
 let umastring = "Maycon 'Robson' Campos"
 let outrastring = 'Maycon "Robson" Campos'
@@ -59,4 +62,30 @@ console.log(umastring.replace("barra","tromba"))
 let stringpraestudar = "O rato roeu a roupa do rei de roma"
 
 console.log(stringpraestudar.length)
-// retorna o tamanho da string
+// retorna o tamanho da string contando os espaços vazios.
+
+/**
+ * FATIAMENTO DE STRINGS
+ */
+
+// Podemos fatiar a string para copiar certos trechos.
+console.log(stringpraestudar.slice(2, 6)) // rato
+
+// Podemos indicar o indice negativo como em Python para acessar de trás pra frente.
+console.log(stringpraestudar.slice(-4)) // roma
+
+console.log(stringpraestudar.substring(stringpraestudar.length - 4)) // Roma
+// Percebemos que substring faz a mesma coisa que slice, só que de uma maneira pior.
+
+/**
+ * DIVIDINDO STRINGS COM SPLIT
+ */
+let divideeu = "Vamos dividir essa string."
+console.log(divideeu.split(" "))
+console.log(divideeu.split("r"))
+console.log(divideeu.split("a"))
+
+// Passando tudo para Maiusculas e minusculas
+console.log(divideeu.toUpperCase())
+console.log(divideeu.toLowerCase())
+
