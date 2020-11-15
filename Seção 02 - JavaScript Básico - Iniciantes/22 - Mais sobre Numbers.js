@@ -79,8 +79,3 @@ numero01 = ((numero01 * 100) + (numero02 * 100)) / 100
 
 console.log(numero01) // 1
 
-
-
-
-
-
