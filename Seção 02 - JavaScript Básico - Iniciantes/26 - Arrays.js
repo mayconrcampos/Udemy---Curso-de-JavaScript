@@ -59,3 +59,12 @@ console.log(numeros.slice(0, -1))
 // Descobrindo o tipo de array
 console.log(typeof alunos) // object
 console.log(alunos instanceof Array) // true
+
+/**
+ * Resumo
+ * 
+ * shift - Remove elemento do começo
+ * unshift - adiciona elemento do começo
+ * push - adiciona ao final
+ * pop - remove do final
+ */
