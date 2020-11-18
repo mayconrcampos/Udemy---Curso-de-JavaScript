@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Documento</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Exercício - Calculando IMC</h1>
+
+    <section>
+        <h1>Tabela IMC</h1>
+        <p>Menor que 18.5 - Abaixo do peso</p>
+        <p>Entre 18.5 e 24.9 - Peso normal</p>
+        <p>Entre 25.0 e 29.9 - Pré-obesidade</p>
+        <p>Entre 30.0 e 34.9 - Obesidade Grau 1</p>
+        <p>Entre 35.0 e 39.9 - Obesidade Grau 2</p>
+        <p>Acima de 40 - Obesidade Grau 3</p>
+
+        <h1>Calcule seu IMC</h1>
+
+        <form class="form" action="">
+            <label for="input-peso">Peso </label>
+            <input type="text" name="peso" class="peso">
+            
+            <label for="input-altura">Altura</label>
+            <input type="text" name="altura" class="altura">
+            <button>Calcular</button>
+        </form>
+    </section>
+    <section>
+        <h1>Resultado</h1>
+        <div class="resultado"></div>
+        <hr>
+        <div class="frase"></div>
+    </section>
+
+    <footer>Maycon Robson Campos - Aulas de JavaScript com Luiz Otávio de Miranda.</footer>
+
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
