@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Aula 31</title>
+
+</head>
+<body>
+    <h1>Exercício que envolve três conceitos de JavaScript - Funções, Array Objetos </h1>
+
+    <section>
+        <h1>Preencha o Formulário</h1>
+
+        <form class="form" action="" method="get">
+
+            <p>Nome: <input type="text" name="nome" class="nome" placeholder="Digite o nome"></p>
+
+            <p>Sobrenome: <input type="text" name="sobrenome" class="sobrenome"    placeholder="Digite o sobrenome"></p>
+
+            <p>Peso: <input type="text" name="peso" class="peso"   placeholder="Digite o peso (kg)"></p>
+
+            <p>Altura: <input type="text" name="altura" class="altura"     placeholder="Digite a altura (m)"></p>
+
+            <button>Enviar</button>
+
+        </form>
+        
+
+        <div class="mostra"></div>
+    </section>
+    <footer>Maycon Robson Campos - Estudos de JavaScript.</footer>
+
+    <script>
+        var mostra = document.querySelector(".mostra")
+
+        function criaPessoa(nome, sobrenome, peso, altura){
+            return {nome, sobrenome, peso, altura}
+        }
+
+        function formulario() {
+            
+            const form = document.querySelector(".form")
+            const arrayNomes = []
+
+            function eventosForm(evento){
+                evento.preventDefault()
+
+                let nome = form.querySelector(".nome").value
+                let sobrenome = form.querySelector(".sobrenome").value
+                let peso = form.querySelector(".peso").value
+                let altura = form.querySelector(".altura").value
+
+                const nova = arrayNomes.push(criaPessoa(nome, sobrenome, peso, altura))
+
+                //console.log(arrayNomes)
+            
+                mostra.innerHTML = ""
+                for(let i = 0; i < arrayNomes.length; i++){
+                    mostra.innerHTML += `<br><strong>Nome</strong>: ${arrayNomes[i].nome} <strong>Sobrenome</strong>: ${arrayNomes[i].sobrenome} <strong>Peso(kg)</strong>: ${arrayNomes[i].peso}kg <strong>Altura(m)</strong>: ${arrayNomes[i].altura}m`
+                }
+                
+            }
+            form.addEventListener("submit", eventosForm)
+        }
+        formulario()
+        
+
+    </script>
+    
+</body>
+</html>

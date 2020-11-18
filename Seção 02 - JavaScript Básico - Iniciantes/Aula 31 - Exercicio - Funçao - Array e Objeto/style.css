@@ -1,0 +1,15 @@
+body {
+    background: slategray;
+    color: snow;
+    text-align: center;
+}
+section {
+    background: snow;
+    color: black;
+    border-radius: 5px 5px 5px;
+    box-shadow: 5px 5px 5px black;
+    padding: 10px;
+}
+footer {
+    padding-top: 5px;
+}
