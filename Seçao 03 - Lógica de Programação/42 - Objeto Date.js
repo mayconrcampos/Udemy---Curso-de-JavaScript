@@ -31,3 +31,23 @@ function formataData(data){
 const Data = new Date()
 const dataBrasil = formataData(Data)
 console.log(dataBrasil)
+
+// Pegando data de agora e data de 3 dias atrás.
+const datahoje = new Date()
+const ontem = new Date("2020-11-22T22:16:18.503Z")
+
+// Exibindo o timestamp das duas datas.
+const tempohoje = datahoje.getTime()
+const tempoontem = ontem.getTime()
+
+let diferenca = tempohoje - tempoontem
+
+// Convertendo em horas
+const seg = diferenca / 1000
+const min = seg / 60
+const hrs = min / 60
+
+// exibindo a diferença em horas
+console.log(`${hrs.toFixed(1)} horas de diferença.`)
+
+
