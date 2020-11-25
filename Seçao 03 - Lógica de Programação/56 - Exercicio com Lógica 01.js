@@ -18,3 +18,4 @@ function maioremenor(array){
 
 const numeros = [1,6,3,2,8,9,7,4,55,-2,-15,22,5,4,1,99,8,5,1,78,15]
 maioremenor(numeros)
+
