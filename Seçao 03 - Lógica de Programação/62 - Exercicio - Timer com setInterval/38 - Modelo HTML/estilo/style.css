@@ -50,9 +50,7 @@ form button:hover {
 }
 div.cronometro {
     font-size: 72px;
-    font-style: oblique;
+    padding-bottom: 10px;
 }
-input {
-    margin-top: 10px;
-}
+
 
