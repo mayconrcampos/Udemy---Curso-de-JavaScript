@@ -16,12 +16,15 @@ function CriaCalculadora() {
             if(el.classList.contains("btn-num")){
                 this.btnParaDisplay(el.innerText)
             }
+
             if(el.classList.contains("btn-clear")){
                 this.clearDisplay()
             }
+
             if(el.classList.contains("btn-del")){
                 this.btnDelete()
             }
+
             if(el.classList.contains("btn-eq")){
                 this.realizaConta()
             }
@@ -30,6 +33,8 @@ function CriaCalculadora() {
 
     this.btnParaDisplay = (valor) => {
         this.display.value += valor
+        this.display.focus()
+        
     }
 
     this.clearDisplay = () => {
@@ -45,12 +50,12 @@ function CriaCalculadora() {
 
         try {
             conta = eval(conta)
-
             if(!conta) {
                 alert("Conta Inválida")
                 return
             }
             this.display.value = String(conta)
+            this.display.focus()
         }catch(e) {
             alert("Conta Inválida")
             return
@@ -75,4 +80,4 @@ function CriaCalculadora() {
 }
 
 let calculadora = new CriaCalculadora()
-calculadora.inicia()
+calculadora.inicia() 
