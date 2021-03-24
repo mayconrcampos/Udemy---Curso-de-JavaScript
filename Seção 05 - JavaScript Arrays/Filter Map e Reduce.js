@@ -25,20 +25,14 @@ var carros = [
 // Vamos agrupar retornos com filter, map e reduce.
 
 // Vamos fazer com que o reduce retorna um objeto em que a chave seja a propriedade que quisermos selecionar.
+console.log("----------------------")
 
-function groupBy(array, propriedade) {
-    var value = array.reduce((acumulado, item) => {
-        var key = item[propriedade]
-
-        acumulado[key] = (acumulado[key] || []).concat(item)
-
-        return acumulado
-    }, [])
-
+function groupBy(array, prop) {
+    var value = array.reduce((total, item) => {
+        var key = item[prop]
+    }, {})
 }
 
-var agrupados = groupBy(carros, "cor")
-
+var agrupados = groupBy(carros, "marca")
 console.log(agrupados)
 
-// https://www.youtube.com/watch?v=nhPudffllkg&t=4670s
