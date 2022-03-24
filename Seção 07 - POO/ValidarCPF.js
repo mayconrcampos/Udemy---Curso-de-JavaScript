@@ -16,12 +16,12 @@ class ValidaCPF {
 
     geraNovoCPF(){
         const cpfSemDigitos = this.cpfLimpo.slice(0, -2)
-        const digito1 = this.geraDigito(cpfSemDigitos)
-        const digito2 = this.geraDigito(cpfSemDigitos + digito1)
+        const digito1 = ValidaCPF.geraDigito(cpfSemDigitos)
+        const digito2 = ValidaCPF.geraDigito(cpfSemDigitos + digito1)
         this.novoCPF = cpfSemDigitos + digito1 + digito2
     }
 
-    geraDigito(cpfSemDigitos){
+    static geraDigito(cpfSemDigitos){
         let total = 0
         let reverso = cpfSemDigitos.length + 1
 
